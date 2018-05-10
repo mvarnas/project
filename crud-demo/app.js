@@ -37,5 +37,14 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+const mongoose = require("mongoose");
+
+const user = process.env.MDB_USER;
+const passwd = process.env.MDB_PASSWORD;
+
+mongoose
+  .connect(`mongodb://${user}:${passwd}@ds013182.mlab.com:13182/csulb-is445`)
+  .then(() => console.log("connection successful"))
+  .catch(err => console.error(err));
 
 module.exports = app;
