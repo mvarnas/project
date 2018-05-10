@@ -18,6 +18,12 @@
 
     <table>
       <tbody>
+          <tr>
+              <td>#</td>
+              <td>
+                <input type="text" name="number" value="<%= user.number %>" />
+              </td>
+            </tr>
         <tr>
           <td>Name</td>
           <td>
@@ -25,23 +31,17 @@
           </td>
         </tr>
         <tr>
-          <td>Address</td>
+          <td>E-mail</td>
           <td>
-            <textarea name="address">
-              <%= user.address %>
+            <textarea name="email">
+              <%= user.email %>
             </textarea>
           </td>
         </tr>
         <tr>
-          <td>Position</td>
+          <td>Phone</td>
           <td>
-            <input type="text" name="position" value="<%= user.position %>" />
-          </td>
-        </tr>
-        <tr>
-          <td>Salary</td>
-          <td>
-            <input type="number" name="salary" value="<%= user.salary %>" />
+            <input type="text" name="phone" value="<%= user.phone%>" />
           </td>
         </tr>
         <tr>

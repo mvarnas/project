@@ -50,10 +50,10 @@ userController.edit = function(req, res) {
       req.params.id,
       {
         $set: {
+          number: updatedUser.number
           name: updatedUser.name,
-          address: updatedUser.address,
-          position: updatedUser.position,
-          salary: updatedUser.salary
+          email: updatedUser.email,
+          phone: updatedUser.phone,
         }
       },
       { new: true }, // return updated
