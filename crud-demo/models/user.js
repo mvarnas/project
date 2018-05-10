@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
+  number: Number,
   name: String,
-  address: String,
-  position: String,
-  salary: Number,
+  email: String,
+  phone: String,
   updated_at: { type: Date, default: Date.now }
 });
 

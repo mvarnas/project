@@ -4,21 +4,24 @@ function updateUser() {
   const url = window.location.pathname;
   const userId = url.substring(url.lastIndexOf("/") + 1);
   console.log(userId);
-  const salaryVal = $("input[name=salary]")
-    .val()
-    .trim();
-  const salary = parseInt(salaryVal, 10);
+  // const salaryVal = $("input[name=salary]")
+  //   .val()
+  //   .trim();
+  // const salary = parseInt(salaryVal, 10);
   const user = {
+    number: $("input[name=number]")
+    .val()
+    .trim(),
     name: $("input[name=name]")
       .val()
       .trim(),
-    address: $("textarea[name=address]")
+    email: $("textarea[name=email]")
       .val()
       .trim(),
-    position: $("input[name=position]")
+    phone: $("input[name=phone]")
       .val()
       .trim(),
-    salary
+ 
   };
 
   const request = $.ajax({
