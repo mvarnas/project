@@ -22,6 +22,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
+            
             <a class="nav-item nav-link active" href="/users"><i class="fas fa-list-alt"></i> Index <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/users/user"><i class="fas fa-plus-square"></i> New</a>
           </div>
@@ -52,7 +53,7 @@
           <% for(var i=0; i<users.length;i++) { %>
             <tr>
               <td>
-                <%= users[i].number%>
+                <%= i + 1 %>
               </td>
               <td>
                 <%= users[i].name%>
@@ -64,12 +65,11 @@
                   <%= users[i].phone%>
                 </td>
               <td>
-                <a href="/users/user/<%= users[i]._id%>">
-                  Edit
+                  <a class="btn btn-outline-warning" href="/users/user/<%= users[i]._id%>" role="button">Edit</a>
                 </a>
               </td>
               <td>
-                <button class="deleteButton" data-uid="<%= users[i]._id%>">
+                <button class="btn btn-outline-danger deleteButton" data-uid="<%= users[i]._id%>">
                   Delete
                 </button>
               </td>
