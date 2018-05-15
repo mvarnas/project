@@ -30,13 +30,10 @@
       </nav>
 <header>
   <br>
-<h3>Contact List</h3>
 </header>
-<h5>Welcome to the contact management page. </h5><br>
+<h5>Welcome to the user management page. </h5><br>
   <div class="container">
-    <h3>
-      <a href="/users/user">Create New User</a>
-    </h3>
+
     <h1>User List</h1>
     <% if(users.length>0) { %>
       <table>
@@ -46,7 +43,6 @@
             <th>Name</th>
             <th>E-mail</th>
             <th>Phone</th>
-            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -81,6 +77,10 @@
         <div>No users found.</div>
         <% } %>
   </div>
+  <br>
+  <h5>
+      <a href="/users/user">Create New User</a>
+    </h5>
 </body>
 
 </html>

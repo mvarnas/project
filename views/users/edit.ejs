@@ -48,9 +48,7 @@
         <tr>
           <td>E-mail</td>
           <td>
-            <textarea name="email">
-              <%= user.email %>
-            </textarea>
+            <input type="text" name="email" value="<%= user.email %>"/>
           </td>
         </tr>
         <tr>
@@ -61,7 +59,7 @@
         </tr>
         <tr>
           <td colspan="2">
-            <button id="updateButton">Update</button>
+            <button id="updateButton" type="update" class="btn btn-success mxy-5"> Update</button>
           </td>
         </tr>
       </tbody>
