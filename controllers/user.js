@@ -29,6 +29,22 @@ userController.edit = function(req, res) {
     }
   };
   
+  userController.details = function(req, res) {
+    const userId = req.params.id;
+  
+    if (userId) {
+      User.findOne({ _id: userId }).exec(function(err, user) {
+        if (err) {
+          console.log("Error:", err);
+        } else {
+          res.render("users/details", { user });
+        }
+      });
+    } else {
+      res.render("users/create");
+    }
+  };
+
   userController.create = function(req, res) {
     var user = new User(req.body);
   
@@ -76,6 +92,7 @@ userController.edit = function(req, res) {
         console.log(`User ${uid} deleted!`);
       }
     });
+    console.log('Are you sure?')
   
     // the server should respond with data to fire jquery callback
     res.json({});
