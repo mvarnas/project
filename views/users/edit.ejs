@@ -50,7 +50,22 @@
       </td>
     </form>      
   </div>
-
+  <script>
+    $(document).ready(function(){
+        $('#btn1').on('click', function(){
+            $('.contacts').toggle();
+        });
+        $('#btn2').on('click', function(){
+            $('.contactform').show();
+        });
+        $('input').focus(function(){
+            $(this).css('background', 'pink');
+        });
+            $('input').blur(function(){
+            $(this).css('background', 'white');
+        });
+    });
+</script>
 </body>
 
 </html>

@@ -1,8 +1,17 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+ }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:blueviolet;
+    color: white;
+    text-align: center;
+}
 a {
   color: #00B7FF;
 }
@@ -10,8 +19,9 @@ a {
 table{
   table-layout: auto;
   width: 650px; 
-  padding:100px
+  padding:100px; 
 }
+
 .container {
   justify-content: space-around;
 }
