@@ -14,21 +14,20 @@ userController.list = function(req, res) {
 };
 
 userController.edit = function(req, res) {
-    const userId = req.params.id;
-  
-    if (userId) {
-      User.findOne({ _id: userId }).exec(function(err, user) {
-        if (err) {
-          console.log("Error:", err);
-        } else {
-          res.render("users/edit", { user });
-        }
-      });
-    } else {
-      res.render("users/create");
-    }
-  };
+  const userId = req.params.id;
 
+  if (userId) {
+    User.findOne({ _id: userId }).exec(function(err, user) {
+      if (err) {
+        console.log("Error:", err);
+      } else {
+        res.render("users/edit", { user });
+      }
+    });
+  } else {
+    res.render("users/create");
+  }
+};
   userController.create = function(req, res) {
     var user = new User(req.body);
   
@@ -50,7 +49,6 @@ userController.edit = function(req, res) {
       req.params.id,
       {
         $set: {
-          // number: updatedUser.number,
           name: updatedUser.name,
           email: updatedUser.email,
           phone: updatedUser.phone,

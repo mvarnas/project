@@ -46,17 +46,19 @@
       </div>
       <br>
       <td colspan="2">
-        <button id="updateButton" type="update" class="btn btn-success mxy-5"> Update</button>
+          <div class="form-group px-5">
+        <button id="updateButton" class="btn btn-success">Update</button>
+        </div>
       </td>
     </form>      
   </div>
   <script>
     $(document).ready(function(){
         $('#btn1').on('click', function(){
-            $('.contacts').toggle();
+            $('.users').toggle();
         });
         $('#btn2').on('click', function(){
-            $('.contactform').show();
+            $('.usersForm').show();
         });
         $('input').focus(function(){
             $(this).css('background', 'pink');
@@ -66,6 +68,10 @@
         });
     });
 </script>
+
+<div class="footer">
+  <p>Created by Michelle Varnas for IS445 Final Project <i class="fas fa-graduation-cap"></i></p>
+</div>
 </body>
 
 </html>
