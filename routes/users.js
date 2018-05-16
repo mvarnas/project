@@ -10,9 +10,10 @@ router.get("/", user.list);
 router.post("/user", user.create);
 
 // Edit or create a user
-router.get("/user/:id?", user.edit);
 
-router.get("/user/:id?", user.details);
+router.get("/details/:id", user.details);
+
+router.get("/user/:id?", user.edit);
 
 router.put("/user/:id?", user.update);
 

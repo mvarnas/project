@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+table{
+  table-layout: auto;
+  width: 650px; 
+  padding:100px
+}
+.container {
+  justify-content: space-around;
+}

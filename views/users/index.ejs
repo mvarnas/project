@@ -31,11 +31,10 @@
 <header>
   <br>
 </header>
-<h5>Welcome to the user management page. </h5><br>
+<h4>Welcome to the user management page. </h4><br>
+<h2>User List</h2>
   <div class="container">
-
-    <h1>User List</h1>
-    <% if(users.length>0) { %>
+   <% if(users.length>0) { %>
       <table>
         <thead>
           <tr>
@@ -61,7 +60,7 @@
                   <%= users[i].phone%>
                 </td>
                 <td>
-                  <a class="btn btn-outline-primary" href="/users/user/<%= users[i]._id%>" role="button">Details</a>
+                  <a class="btn btn-outline-primary" href="/users/details/<%= users[i]._id%>" role="button">Details</a>
                 </a>
               </td>
               <td>

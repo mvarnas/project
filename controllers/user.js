@@ -28,22 +28,6 @@ userController.edit = function(req, res) {
       res.render("users/create");
     }
   };
-  
-  userController.details = function(req, res) {
-    const userId = req.params.id;
-  
-    if (userId) {
-      User.findOne({ _id: userId }).exec(function(err, user) {
-        if (err) {
-          console.log("Error:", err);
-        } else {
-          res.render("users/details", { user });
-        }
-      });
-    } else {
-      res.render("users/create");
-    }
-  };
 
   userController.create = function(req, res) {
     var user = new User(req.body);
@@ -83,6 +67,15 @@ userController.edit = function(req, res) {
     );
   };
 
+  userController.details = function (req, res) {
+    User.findOne({ _id: req.params.id }).exec(function (err, user) {
+      if (err) {
+        console.log("Error:", err);
+      } else {
+        res.render("users/details", { user });
+      }
+    });
+  };
   userController.delete = function(req, res) {
     const uid = req.params.id;
     User.remove({ _id: uid }, function(err) {
