@@ -14,7 +14,7 @@ function updateUser() {
       .trim(),
     phone: $("input[name=phone]")
       .val()
-      .trim(),
+      .trim()
  
   };
 
